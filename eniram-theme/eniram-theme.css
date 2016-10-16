@@ -1,0 +1,67 @@
+@font-face {
+  font-family: CoreSans;
+  src: url("S-Core - CoreSansM55Medium.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: CoreSans;
+  src: url("S-Core - CoreSansM65Bold.otf");
+  font-weight: bol+d;
+}
+
+div.text_cell_render {
+  font-family: CoreSans;
+  padding-bottom: 0;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: CoreSans;
+  margin-bottom: .5em;
+}
+
+.inverse,
+.reveal .inverse *,
+.reveal .inverse a:not(.image) {
+  color: #ddd;
+}
+
+.container {
+  width: 100% !important;
+}
+
+.reveal sub, .reveal sup {
+  font-size: 50%:
+}
+
+.reveal .rendered_html pre,
+.reveal .rendered_html code {
+  font-size: 76%;
+  background: #fdf6e3;
+}
+
+.fragment .rendered_html {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.rendered_html pre,
+.fragment .rendered_html code {
+  margin: 1em 0 0 0;
+  width: 100%;
+}
+
+.fragment .rendered_html pre,
+.fragment .rendered_html code {
+  margin: 0;
+}
+
+.rendered_html td,
+.rendered_html th {
+  padding: 15px;
+}
