@@ -15,6 +15,12 @@ div.text_cell_render {
   padding-bottom: 0;
 }
 
+.reveal .slides > section > section {
+  /* reduce padding at top of slide */
+  padding-top: 0;
+  top: -22px;
+}
+
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -39,29 +45,54 @@ div.text_cell_render {
   font-size: 50%:
 }
 
-.reveal .rendered_html pre,
-.reveal .rendered_html code {
-  font-size: 76%;
-  background: #fdf6e3;
+.rise-enabled .reveal pre,
+.rise-enabled .reveal code {
+  /* code font size */
+  font-size: 92%;
+  line-height: 125%;
+  /* background: #fdf6e3; */
 }
 
-.fragment .rendered_html {
-  padding-top: 0;
-  padding-bottom: 0;
+.rise-enabled .fragment {
+/*  padding-top: 0;
+  padding-bottom: 0; */
 }
 
-.rendered_html pre,
-.fragment .rendered_html code {
-  margin: 1em 0 0 0;
-  width: 100%;
+.rise-enabled pre,
+.rise-enabled .fragment code {
+  /* margin: 1em 0 0 0; */
+  /* width: 100%; */
 }
 
-.fragment .rendered_html pre,
-.fragment .rendered_html code {
-  margin: 0;
+.rise-enabled .fragment pre,
+.rise-enabled .fragment code {
+/*  margin: 0; */
 }
 
-.rendered_html td,
-.rendered_html th {
-  padding: 15px;
+.rise-enabled td,
+.rise-enabled th {
+/*  padding: 15px; */
+}
+
+.rise-enabled .CodeMirror {
+  max-width: 1425px !important;
+}
+
+section.present > :last-child:before {
+  /* page break hint when last fragment appears */
+  content: "→";
+  color: #888;
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+}
+
+.data-table td {
+  font-family: monospace;
+  font-size: 24px;
+}
+
+.data-table td,
+.data-table th {
+  padding: 5px;
 }
