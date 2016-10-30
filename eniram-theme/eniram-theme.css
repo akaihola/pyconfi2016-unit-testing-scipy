@@ -61,7 +61,7 @@ div.text_cell_render {
 .rise-enabled pre,
 .rise-enabled .fragment code {
   /* margin: 1em 0 0 0; */
-  /* width: 100%; */
+  width: 100%; /* prevent hiding 10% from the right side */
 }
 
 .rise-enabled .fragment pre,
@@ -76,6 +76,11 @@ div.text_cell_render {
 
 .rise-enabled .CodeMirror {
   max-width: 1425px !important;
+}
+
+.rise-enabled .CodeMirror-hscrollbar * {
+  /* Prevent scrollbars from appearing with Decktape (phantomjs) */
+  overflow-x: hidden;
 }
 
 section.present > :last-child:before {
